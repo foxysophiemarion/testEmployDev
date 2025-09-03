@@ -1,0 +1,94 @@
+<section data-fls-feedback class="home__feedback feedback">
+	<img class="feedback__image ibg" src="@img/feedback.png" alt="Изображение">
+	<div class="feedback__container">
+		<h2 class="feedback__title title">Оформление <span>Заказа</span></h2>
+		<p class="feedback__description">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+		<div class="feedback__row">
+			<div data-fls-grid-col="2" data-fls-grid-col-mobile="4" data-fls-grid-col-small="6"
+				class="feedback__item item-feedback">
+				<div class="item-feedback__icon">
+					<svg>
+						<use xlink:href="__spritemap#sprite-search"></use>
+					</svg>
+				</div>
+				<p class="item-feedback__text">Lorem ipsum dolor
+					sit amet</p>
+				<div class="feedback__dot"><span></span><span></span><span></span><span></span><span></span></div>
+			</div>
+			<div data-fls-grid-col="2" data-fls-grid-col-mobile="4" data-fls-grid-col-small="6"
+				class="feedback__item item-feedback">
+				<div class="item-feedback__icon">
+					<svg>
+						<use xlink:href="__spritemap#sprite-percent"></use>
+					</svg>
+				</div>
+				<p class="item-feedback__text">Сonsecteturadipiscing elit</p>
+				<div class="feedback__dot"><span></span><span></span><span></span><span></span><span></span></div>
+			</div>
+			<div data-fls-grid-col="2" data-fls-grid-col-mobile="4" data-fls-grid-col-small="6"
+				class="feedback__item item-feedback">
+				<div class="item-feedback__icon">
+					<svg>
+						<use xlink:href="__spritemap#sprite-file"></use>
+					</svg>
+				</div>
+				<p class="item-feedback__text">Sed do eiusmod tempor</p>
+				<div class="feedback__dot"><span></span><span></span><span></span><span></span><span></span></div>
+			</div>
+			<div data-fls-grid-col="2" data-fls-grid-col-mobile="6" class="feedback__item item-feedback">
+				<div class="item-feedback__icon">
+					<svg>
+						<use xlink:href="__spritemap#sprite-message"></use>
+					</svg>
+				</div>
+				<p class="item-feedback__text">Esse cillum dolore
+					eu fugiat</p>
+				<div class="feedback__dot"><span></span><span></span><span></span><span></span><span></span></div>
+			</div>
+			<div data-fls-grid-col="2" data-fls-grid-col-mobile="6" data-fls-grid-col-small="12"
+				class="feedback__item item-feedback">
+				<div class="item-feedback__icon">
+					<svg>
+						<use xlink:href="__spritemap#sprite-money"></use>
+					</svg>
+				</div>
+				<p class="item-feedback__text">Excepteur sint occaecat cupidatat non proident</p>
+			</div>
+
+		</div>
+		<form class="feedback__form form" data-fls-form="dev" data-fls-form-popup="popup" method="POST"
+			action="php/sendmail" method="POST">
+			<div data-fls-grid data-fls-grid-samerows class="form__body">
+				<select name="form[select]" data-fls-select data-fls-select-modif="form" data-fls-select-search>
+					<option value="" disabled selected>Выберите тип системы</option>
+					<option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+					<option value="Nemo enim ipsam">Nemo enim ipsam</option>
+					<option value="Et harum quidem">Et harum quidem</option>
+					<option value="Temporibus autem">Temporibus autem</option>
+					<option value="Itaque earum rerum">Itaque earum rerum</option>
+					<option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+					<option value="Nemo enim ipsam">Nemo enim ipsam</option>
+					<option value="Et harum quidem">Et harum quidem</option>
+					<option value="Temporibus autem">Temporibus autem</option>
+					<option value="Itaque earum rerum">Itaque earum rerum</option>
+				</select>
+				<input data-fls-grid-col="4" data-fls-grid-col-mobile="12" data-fls-input required autocomplete="off"
+					type="email" name="form[mail]" placeholder="Ваш e-mail" class="form__input input">
+				<input data-fls-grid-col="4" data-fls-grid-col-mobile="12" data-fls-input autocomplete="off" type="text"
+					name="form[name]" placeholder="Ваше имя" class="form__input input">
+				<div data-fls-grid-col="8" data-fls-grid-col-mobile="12" data-fls-range class="range"><span>Sed ut
+						perspiciatis, unde omnis iste
+						natus</span></div>
+				<div data-fls-grid-col="4" data-fls-grid-col-mobile="6" data-fls-grid-col-small="12"
+					class="custom-file-upload">
+					<input autocomplete="off" type="file" name="form[file]" id="file-input" class="form__input file-input"
+						hidden>
+					<label for="file-input" class="custom-file-upload__button --icon-export">Прикрепить файл</label>
+					<span class="custom-file-upload__filename"></span>
+				</div>
+				<button data-fls-button data-fls-grid-col-start="5" data-fls-grid-col-end="8" data-fls-grid-col-mobile="6"
+					data-fls-grid-col-small="12" type="submit" class="form__button button button_order">Отправить</button>
+			</div>
+		</form>
+	</div>
+</section>

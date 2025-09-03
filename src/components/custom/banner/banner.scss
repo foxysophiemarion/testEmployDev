@@ -1,0 +1,53 @@
+.banner {
+	position: relative;
+	z-index: 1;
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	&__image {
+	}
+	&__container {
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("gap", 80, 20);
+	}
+
+	&__title {
+	}
+
+	&__item {
+	}
+
+	&__row {
+	}
+}
+
+.item-banner {
+	&__title {
+		@include adaptiveValue("font-size", 20, 14);
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+	&__list {
+	}
+
+	&__item {
+		@include adaptiveValue("font-size", 20, 12);
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+	}
+}
+.row-banner {
+	display: flex;
+	@include adaptiveValue("gap", 40, 16);
+	flex-wrap: wrap;
+	&__button {
+	}
+}

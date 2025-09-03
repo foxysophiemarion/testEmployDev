@@ -1,0 +1,31 @@
+{
+	"compilerOptions": {
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"target": "ES2022",
+		"jsx": "react-jsx",
+		"allowImportingTsExtensions": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true
+	},
+	"exclude": [
+		"node_modules",
+		"**/node_modules/*",
+		"dist",
+		"build",
+		"**/dist/*",
+		"**/build/*",
+		"src/assets/fonts",
+		"src/assets/img",
+		"src/assets/svgicons/preview",
+		"src/components/wordpress/fls-theme/assets/build",
+		"src/components/wordpress/fls-theme/assets/js/dev",
+		"src/components/wordpress/fls-theme/assets/css/dev",
+		"src/php/sendmail/phpmailer",
+		"src/styles/libs",
+		"template_modules/statistics",
+		"template_modules/assets",
+		"template_modules/iconfont",
+		"template_modules/wordpress"
+	]
+}

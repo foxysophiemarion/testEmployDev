@@ -1,0 +1,27 @@
+.header {
+	color: #fff;
+	background-color: rgba(16, 16, 29, 0.9);
+	@include adaptiveValue("padding-top", 32, 16);
+	@include adaptiveValue("padding-bottom", 32, 16);
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+	}
+
+	&__logo {
+		text-transform: uppercase;
+		font-family: $fontRaleway;
+		flex: 1 1 auto;
+		transition: color 0.3s;
+		span:nth-child(2) {
+			color: $primaryColor;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $primaryColor;
+			}
+		}
+	}
+}

@@ -1,0 +1,108 @@
+.menu {
+	// .menu__icon
+	&__icon {
+	}
+	// .menu__body
+	&__body {
+		@media (max-width: toEm($mobile)) {
+			position: fixed;
+			width: 100%;
+			height: 100dvb;
+			left: 100%;
+			top: 0;
+			overflow: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: left 0.3s;
+			background-color: $secondaryColor;
+			[data-fls-menu-open] & {
+				left: 0;
+			}
+		}
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: inherit;
+		@include adaptiveValue("gap", 32, 16);
+		@media (max-width: toEm($tablet)) {
+			justify-content: flex-end;
+		}
+		@media (max-width: toEm($mobile)) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+		font-weight: 600;
+		text-transform: uppercase;
+		font-size: 13px;
+		transition: color 0.3s ease-out;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $primaryColor;
+			}
+		}
+		@media (max-width: toEm($mobile)) {
+			font-size: 20px;
+		}
+	}
+}
+
+//Burger Icon
+.icon-menu {
+	display: none;
+	@media (max-width: toEm($mobile)) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - 1px);
+		}
+		[data-fls-menu-open] & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - 1px);
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - 1px);
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

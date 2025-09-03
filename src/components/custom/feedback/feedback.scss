@@ -1,0 +1,149 @@
+.feedback {
+	position: relative;
+	&__image {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+	}
+	&__container {
+	}
+
+	&__title {
+		color: #fff;
+		text-align: center;
+		@include adaptiveValue("margin-bottom", 30, 16);
+	}
+
+	&__description {
+		color: #bbbbbb;
+		text-align: center;
+		@include adaptiveValue("margin-bottom", 80, 40);
+		@include adaptiveValue("font-size", 18, 14);
+	}
+
+	&__row {
+		color: #fff;
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		@include adaptiveValue("gap", 30, 16);
+		position: relative;
+		@media (max-width: toEm($mobile)) {
+			grid-template-columns: repeat(12, 1fr);
+		}
+		@include adaptiveValue("margin-bottom", 80, 40);
+	}
+
+	&__dot {
+		position: absolute;
+		top: 30%;
+		left: 170px;
+		@include adaptiveValue("left", 170, 185, 1, 1920, 1170);
+		@include adaptiveValue("left", 185, 150, 1, 1170, 991.98);
+		@include adaptiveValue("left", 150, 117, 1, 991.98, 767.98);
+		@include adaptiveValue("left", 115, 70, 1, 767.98, 479.98);
+		display: flex;
+		@media (max-width: toEm($mobile)) {
+			display: none;
+		}
+		span {
+			display: inline-block;
+			width: 6px;
+			@include adaptiveValue("width", 6, 4, 1, 1920, 991.98);
+			@include adaptiveValue("width", 6, 4, 1, 991.98, 767.98);
+			@include adaptiveValue("width", 4, 3, 1, 767.98, 320);
+			aspect-ratio: 1;
+			border-radius: 50%;
+			background: #fff;
+			opacity: 0.7;
+			margin: 0 8px;
+			@include adaptiveValue("margin-left", 8, 4, 1, 1920, 991.98);
+			@include adaptiveValue("margin-right", 8, 4, 1, 1920, 991.98);
+			@include adaptiveValue("margin-left", 4, 1, 1, 991.98, 479.98);
+			@include adaptiveValue("margin-right", 4, 1, 1, 991.98, 479.98);
+			flex-shrink: 0;
+		}
+	}
+	&__item {
+		position: relative;
+	}
+}
+
+.item-feedback {
+	text-align: center;
+	padding: 0 10px;
+	&__icon {
+		max-width: 100px;
+		margin: 0 auto;
+		aspect-ratio: 1;
+		display: flex;
+		border-radius: 50%;
+		justify-content: center;
+		border: 5px solid var(--bd-ellipse);
+		background-color: $primaryColor;
+		@include adaptiveValue("margin-bottom", 20, 10);
+		svg {
+			max-width: 55px;
+			fill: #fff;
+			@media (max-width: toEm($mobile)) {
+				max-width: 32px;
+			}
+		}
+		@media (max-width: toEm($mobile)) {
+			max-width: 70px;
+		}
+	}
+
+	&__text {
+		max-width: 190px;
+		margin: 0 auto;
+		@include adaptiveValue("font-size", 16, 14, 1, 1920, 767.98);
+		@include adaptiveValue("font-size", 18, 12, 1, 767.98, 320);
+	}
+}
+.custom-file-upload {
+	border-radius: 3px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.8);
+	cursor: pointer;
+	min-height: 48px;
+	transition: box-shadow 0.3s ease;
+	@include adaptiveValue("font-size", 15, 14);
+	text-transform: uppercase;
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+		}
+	}
+	&__button {
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+		cursor: pointer;
+		align-items: center;
+		transition: color 0.3s;
+
+		border-radius: toRem(4);
+	}
+
+	&__filename {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		font-size: toRem(10);
+		overflow: hidden;
+		color: #fff;
+	}
+}
+
+.form {
+	&__body {
+		align-items: flex-end;
+	}
+	&__button {
+		min-height: 48px;
+	}
+}

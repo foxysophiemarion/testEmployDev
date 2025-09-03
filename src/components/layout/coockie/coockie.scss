@@ -1,0 +1,72 @@
+/* Обнуление встроенных стилей <dialog> */
+.cookie-notice {
+	border: none;
+	background: none;
+	padding: 0;
+	margin: auto 0 0 0;
+	width: 100%;
+	max-width: none;
+	max-height: none;
+	box-shadow: none;
+}
+
+/* Ваши стили */
+.cookie-notice {
+	position: fixed;
+	z-index: 100;
+	bottom: 0;
+	width: 100%;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.9);
+	padding: toRem(15) 0;
+}
+.cookie__container {
+	display: flex;
+	align-items: center;
+	gap: toRem(30);
+	@include adaptiveValue("font-size", 16, 14);
+	@media (max-width: toEm($mobile)) {
+		flex-direction: column;
+	}
+}
+.cookie__actions {
+	display: flex;
+	align-items: center;
+	gap: toRem(20);
+}
+.cookie__description {
+	flex: 1 1 auto;
+	line-height: 1.3;
+	@media (max-width: toEm($mobile)) {
+		text-align: center;
+	}
+}
+.cookie-accept {
+	text-transform: uppercase;
+	color: #fff;
+	padding: toRem(12) toRem(24);
+	background-color: $primaryColor;
+	transition: box-shadow 0.3s;
+	&:hover {
+		box-shadow: 0 0 15px $primaryColor;
+	}
+}
+.cookie-learn-more {
+	white-space: nowrap;
+	transition: color 0.3s;
+	&:hover {
+		color: $primaryColor;
+	}
+}
+
+/* Стили для визуально скрытого заголовка */
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}

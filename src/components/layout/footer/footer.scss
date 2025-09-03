@@ -1,0 +1,100 @@
+.footer {
+	background-color: $lastColor;
+	@include adaptiveValue("padding-top", 30, 16);
+	@include adaptiveValue("padding-bottom", 30, 16);
+	&__container {
+	}
+
+	&__body {
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include adaptiveValue("font-size", 13, 10);
+		gap: 40px;
+		@include adaptiveValue("gap", 40, 20, 1, 1920, 991.98);
+		@include adaptiveValue("gap", 20, 16, 1, 991.98, 320);
+		@media (max-width: toEm($tablet)) {
+			flex-direction: column;
+		}
+	}
+
+	&__copy {
+	}
+
+	&__line {
+		height: 18px;
+		width: 1px;
+		background-color: #c3c3c3;
+		@media (max-width: toEm($tablet)) {
+			width: 100%;
+			height: 1px;
+		}
+	}
+
+	&__pay {
+		white-space: nowrap;
+		flex: 1 1 auto;
+		display: flex;
+		gap: 10px;
+		justify-content: space-between;
+	}
+
+	&__contacts {
+	}
+}
+.pay-footer {
+	&__item {
+		line-height: 2;
+		flex: 0 1 33.333%;
+		display: flex;
+
+		gap: 10px;
+		&:nth-child(2) {
+			justify-content: center;
+		}
+		&:nth-child(3) {
+			justify-content: flex-end;
+		}
+		svg {
+			width: 100%;
+			max-width: 20px;
+			min-width: 20px;
+			aspect-ratio: 1;
+			fill: $primaryColor;
+			.yamoney-dot {
+				fill: #231f20;
+			}
+			.yamoney-accent {
+				fill: #000;
+			}
+		}
+	}
+}
+.contacts-footer {
+	display: flex;
+	line-height: 2;
+	gap: 40px;
+	@include adaptiveValue("gap", 40, 20, 1, 1920, 991.98);
+	@include adaptiveValue("gap", 20, 16, 1, 991.98, 320);
+	&__link {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		transition: color 0.3s;
+		&::before {
+			color: $primaryColor;
+			font-size: 20px;
+			transition: color 0.3s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $primaryColor;
+				&::before {
+					color: #fff;
+				}
+			}
+		}
+	}
+}

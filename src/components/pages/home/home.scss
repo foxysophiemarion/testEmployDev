@@ -1,0 +1,10 @@
+.home {
+	&__banner {
+		@include adaptiveValue("padding-top", 200, 100);
+		@include adaptiveValue("padding-bottom", 200, 50);
+	}
+	&__feedback {
+		@include adaptiveValue("padding-top", 120, 50);
+		@include adaptiveValue("padding-bottom", 150, 50);
+	}
+}

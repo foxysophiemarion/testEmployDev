@@ -1,0 +1,56 @@
+@font-face {
+font-family: "iconfont";
+font-display: swap;
+src: url("D://Front/2025/Test/testEmploy/src/assets/svgicons/preview/iconfont.woff2?0254cbb8b567b641af1b7177e856c08b") format("woff2");
+}
+[class*="--icon-"]::before {
+font-family: iconfont;
+}
+[class*="--icon-yamoney"]::before {
+content: "\f101";
+}
+[class*="--icon-webmoney"]::before {
+content: "\f102";
+}
+[class*="--icon-wa"]::before {
+content: "\f103";
+}
+[class*="--icon-vk"]::before {
+content: "\f104";
+}
+[class*="--icon-tg"]::before {
+content: "\f105";
+}
+[class*="--icon-spoller"]::before {
+content: "\f106";
+}
+[class*="--icon-search"]::before {
+content: "\f107";
+}
+[class*="--icon-qiwi"]::before {
+content: "\f108";
+}
+[class*="--icon-percent"]::before {
+content: "\f109";
+}
+[class*="--icon-money"]::before {
+content: "\f10a";
+}
+[class*="--icon-message"]::before {
+content: "\f10b";
+}
+[class*="--icon-mail"]::before {
+content: "\f10c";
+}
+[class*="--icon-gh"]::before {
+content: "\f10d";
+}
+[class*="--icon-file"]::before {
+content: "\f10e";
+}
+[class*="--icon-export"]::before {
+content: "\f10f";
+}
+[class*="--icon-doc"]::before {
+content: "\f110";
+}
